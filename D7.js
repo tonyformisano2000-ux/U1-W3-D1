@@ -10,7 +10,7 @@ const converter = (a, b) => {
 };
 
 converter(stringa1, stringa2);
-console.log(z);
+console.log("ES 1:", z);
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
@@ -20,7 +20,7 @@ const ES2 = () => {
   for (let i = 0; i < 10; i++) {
     giveMe10.push(Math.round(Math.random() * 100));
   }
-  console.log(giveMe10);
+  console.log("ES 2:", giveMe10);
   return giveMe10;
 };
 ES2();
@@ -35,7 +35,7 @@ const ES3 = giveMe10.filter((n) => {
     return false;
   }
 });
-console.log(ES3);
+console.log("ES 3:", ES3);
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -44,7 +44,7 @@ giveMe10.forEach((x) => {
   sum = sum + x;
   return sum;
 });
-console.log(sum);
+console.log("ES 4:", sum);
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -57,7 +57,7 @@ const ES6 = (n) => {
     return x + n;
   });
   console.log(
-    `l'array iniziale è ${giveMe10}, sommando ${n} ad ogni elemento, l'array risulta ${operation}`,
+    `ES 6:    l'array iniziale è ${giveMe10}, sommando ${n} ad ogni elemento, l'array risulta ${operation}`,
   );
 };
 ES6(3);
@@ -70,7 +70,7 @@ const starter = ["hello", "world", "how", "are", "you"];
 const newAR = starter.map((x) => {
   return x.length;
 });
-console.log(newAR);
+console.log("ES 7:", newAR);
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
@@ -230,6 +230,14 @@ console.log("ES11: ", onlyNames);
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+const genZ = movies.filter((x) => {
+  if (x.Year > 2000) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log("ES12: ", genZ);
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
